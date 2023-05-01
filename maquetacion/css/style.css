@@ -1,0 +1,126 @@
+:root{
+    --tipografia: 'Inter', sans-serif;
+}
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+}
+p {
+    margin-right: 40px;
+}
+#introduction-text h1 {
+    margin: 0px 400px;
+    text-align: center;
+}
+
+#header-left{
+    display: flex;
+    padding-top: 4px;
+    justify-content: left;
+    padding-left: 12px;
+    margin-right: 48px;
+}
+#header-right {
+    display: flex; 
+    width: 100%;
+    align-items: center;
+    justify-content: right;
+    margin: 0 20px;
+    
+}
+
+.iconos {
+    margin-left: 26px;
+    display: flex;
+}
+i {
+    margin-left: 15px;
+}
+i:hover {
+    color: #6B53F0;
+}
+.cursor {
+    cursor: pointer;
+}
+.enlaces:hover {
+    color: #6B53F0;
+}
+button.redondo {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 0px 20px;
+    height: 32px;
+}
+.redondo:hover {
+    background-color: black;
+    color: white;
+}
+.violeta {
+    color: #6B53F0;
+    border: 2px solid #6B53F0 !important;
+}
+.violeta:hover {
+    background-color: #6B53F0;
+}
+div#introduction-actions {
+    display: flex;
+    justify-content: center;
+}
+.hamburger {
+    display: none;
+}
+#builder {
+    background-color: #201B24;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding: 50px;
+    color: white;
+}
+#colum-izq {
+    margin: 0px 100px;
+}
+#texto {
+    padding-left: 40px;
+}
+#colum-der {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+@media screen and (max-width:1042px){
+    #header {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #introduction-text {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    #introduction-text h1 {
+        min-width: 342px;
+    }
+    #colum-izq {
+        margin: 0px 30px;
+    }
+}
+@media screen and (max-width:907px){
+    #header-right {
+        display: none;
+    }
+    #colum-izq {
+        margin: 0px 31px 0 163px;
+        width: 278px;
+    }
+    #colum-der {
+        margin-right: 200px;
+    }
+    
+}
