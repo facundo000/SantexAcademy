@@ -66,9 +66,21 @@ class Carrito {
     this.productos = productos;
   }  
   agregarProducto(nombre, precio, unidades) {
-    this.productos.push(nombre);
-    this.montoTotal = this.montoTotal + precio * unidades;
+    const productoExistente = this.productos.findIndex(function(producto) {
+      return producto.nombre === nombre;
+    });
+  
+    if (productoExistente !== -1) {
+      const producto = this.productos[productoExistente];
+      producto.unidades += unidades;
+      console.log("Ya existe " + producto.nombre + " con " + producto.unidades + " unidades.");
+    } else {
+      const nuevoProducto = { nombre: nombre, precio: precio, unidades: unidades };
+      this.productos.push(nuevoProducto);
+      this.montoTotal += precio * unidades;
+    }
   }
+  
 }
 
 
